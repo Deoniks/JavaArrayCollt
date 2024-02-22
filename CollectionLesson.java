@@ -44,5 +44,11 @@ public class CollectionLesson {
     public static void sixQuestion(ArrayList<String>color, int index){
         color.remove(index);
     }
-    p
+    public static void sevenQuestion(ArrayList<String>color, String clr){
+        for(int i=0;i<color.size();i++){//С целочисленным так же сработает
+            if(color.get(i).equals(clr)){
+                System.out.println(color.get(i));
+            }
+        }
+    }
 }
