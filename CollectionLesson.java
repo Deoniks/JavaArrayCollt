@@ -56,4 +56,8 @@ public class CollectionLesson {
     public static void eightQuestion(){
         Collections.sort(oneQuesion());
     }
+    public static void nineQuestion(ArrayList<String>color){
+        ArrayList<String>copyColor = new ArrayList<>();//можно было сразу тут объявить ещё
+        copyColor.addAll(color);
+    }
 }
