@@ -1,8 +1,7 @@
 package lessColl;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.Scanner;
+import java.lang.reflect.Array;
+import java.util.*;
 
 public class CollectionLesson {
     private static Scanner scan = new Scanner(System.in);
@@ -13,7 +12,8 @@ public class CollectionLesson {
 
         //twoQuestion();
         //threeQuestion(oneQuesion(),"White");
-        fourQuestion(oneQuesion(),1);
+        //fourQuestion(oneQuesion(),1);
+        //fiveQuestion(oneQuesion(),2);
     }
 
     public static ArrayList<String> oneQuesion(){
@@ -40,7 +40,9 @@ public class CollectionLesson {
     public static void fourQuestion(ArrayList<String>color, int index){
         System.out.println(color.get(index));
     }
-    public static void fiveQuestion(){}
+    public static void fiveQuestion(ArrayList<String>color, int index){
+        color.set(index,"Purple");
+    }
     public static void sixQuestion(ArrayList<String>color, int index){
         color.remove(index);
     }
@@ -50,5 +52,8 @@ public class CollectionLesson {
                 System.out.println(color.get(i));
             }
         }
+    }
+    public static void eightQuestion(){
+        Collections.sort(oneQuesion());
     }
 }
