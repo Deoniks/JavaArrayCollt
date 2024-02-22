@@ -91,4 +91,11 @@ public class CollectionLesson {
     public static void seventeenQuestion(ArrayList<String>color){
         color.clear();
     }
+    public static void eighteenQuestion(ArrayList<String>color){
+        for (int i=0;i<color.size(),i++){
+            if(color.equals(null)) {
+                System.out.println("Есть пустой элемент");
+            }else System.out.println("Нет пустого элемента");
+        }
+    }
 }
