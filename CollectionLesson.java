@@ -86,22 +86,22 @@ public class CollectionLesson {
         color.addAll(clr);
     }
     public static void sixteenQuestion(ArrayList<String>color){
-        ArrayList<String>clr = new ArrayList<>()color.clone();
+        ArrayList<String>clr = new ArrayList<String>();clr = (ArrayList<String>)color.clone();
     }
     public static void seventeenQuestion(ArrayList<String>color){
         color.clear();
     }
     public static void eighteenQuestion(ArrayList<String>color){
-        for (int i=0;i<color.size(),i++){
-            if(color.equals(null)) {
-                System.out.println("Есть пустой элемент");
-            }else System.out.println("Нет пустого элемента");
-        }
+        if(color.isEmpty()){
+            System.out.println("Есть пустой элемент");
+        }else System.out.println("Нет пустого элемента");
     }
-    public static void nineteenQuestion(){
-        ArrayList<String>color = new ArrayList<>(5);
+    public static void nineteenQuestion(ArrayList<String>color){
+        ArrayList<String>clr = (new ArrayList<>(5));
+        clr = (ArrayList<String>)color.clone();
     }
-    public static void twentyQuestion(){
-        ArrayList<String>color = new ArrayList<>(20);
+    public static void twentyQuestion(ArrayList<String>color){
+        ArrayList<String>clr = new ArrayList<String>(20);
+        clr = (ArrayList<String>)color.clone();
     }
 }
