@@ -60,4 +60,10 @@ public class CollectionLesson {
         ArrayList<String>copyColor = new ArrayList<>();//можно было сразу тут объявить ещё
         copyColor.addAll(color);
     }
+    public static void tenQuestion(ArrayList<String>color){
+        Collections.shuffle(color);
+    }
+    public static void elevenQustion(ArrayList<String>color){
+        Collections.reverse(color);
+    }
 }
