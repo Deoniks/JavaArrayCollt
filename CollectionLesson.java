@@ -12,7 +12,8 @@ public class CollectionLesson {
         } firs prog*/
 
         //twoQuestion();
-        threeQuestion(oneQuesion(),"White");
+        //threeQuestion(oneQuesion(),"White");
+        fourQuestion(oneQuesion(),1);
     }
 
     public static ArrayList<String> oneQuesion(){
@@ -37,5 +38,9 @@ public class CollectionLesson {
         while (iteratorColor.hasNext()){
             System.out.println(iteratorColor.next());
         }
+    }
+
+    public static void fourQuestion(ArrayList<String>color, int index){
+        System.out.println(color.get(index));
     }
 }
