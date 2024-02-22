@@ -79,4 +79,16 @@ public class CollectionLesson {
             System.out.println("Равны");
         }else System.out.println("Не равны");
     }
+    public static void fourteenQuestion(ArrayList<String>color, int fIndex, int lIndex){
+        Collections.swap(color,fIndex,lIndex);
+    }
+    public static void fifteenQuestion(ArrayList<String>color,ArrayList<String>clr){
+        color.addAll(clr);
+    }
+    public static void sixteenQuestion(ArrayList<String>color){
+        ArrayList<String>clr = new ArrayList<>()color.clone();
+    }
+    public static void seventeenQuestion(ArrayList<String>color){
+        color.clear();
+    }
 }
