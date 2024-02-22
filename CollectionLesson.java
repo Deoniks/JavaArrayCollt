@@ -66,4 +66,17 @@ public class CollectionLesson {
     public static void elevenQustion(ArrayList<String>color){
         Collections.reverse(color);
     }
+    public static void twentyQuestion(ArrayList<String>color, int sIndex){
+        for (int i =0;i<color.size();i++){
+            if(i == sIndex){
+                System.out.println(color.get(i));
+            }
+        }
+    }
+    public static void thirteenQuestion(ArrayList<String>color){
+        ArrayList<String>clr = new ArrayList<>();
+        if(color.equals(clr)){
+            System.out.println("Равны");
+        }else System.out.println("Не равны");
+    }
 }
