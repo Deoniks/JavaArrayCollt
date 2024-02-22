@@ -98,4 +98,10 @@ public class CollectionLesson {
             }else System.out.println("Нет пустого элемента");
         }
     }
+    public static void nineteenQuestion(){
+        ArrayList<String>color = new ArrayList<>(5);
+    }
+    public static void twentyQuestion(){
+        ArrayList<String>color = new ArrayList<>(20);
+    }
 }
