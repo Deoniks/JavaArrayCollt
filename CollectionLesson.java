@@ -24,14 +24,12 @@ public class CollectionLesson {
 
         return color;
     }
-
     public static void twoQuestion(){
         Iterator<String> iterationColor = oneQuesion().listIterator();
         while (iterationColor.hasNext()){
             System.out.println(iterationColor.next());
         }
     }
-
     public static void threeQuestion(ArrayList<String>color, String clr){
         color.add(0,clr);
         Iterator<String>iteratorColor = color.listIterator();
@@ -39,8 +37,12 @@ public class CollectionLesson {
             System.out.println(iteratorColor.next());
         }
     }
-
     public static void fourQuestion(ArrayList<String>color, int index){
         System.out.println(color.get(index));
     }
+    public static void fiveQuestion(){}
+    public static void sixQuestion(ArrayList<String>color, int index){
+        color.remove(index);
+    }
+    p
 }
