@@ -10,23 +10,9 @@ public class Student {
     private int grade;
     static LinkedList<Student>students = new LinkedList<>();
 
-    public static void main(String[] args) {
-        Students();
-        for (int i=0;i<students.size();i++){
-            System.out.println(students.get(i));
-        }
-        expelStudent();
-        nextCourse();
-        System.out.println("________________________");
-        for (int i=0;i<students.size();i++){
-            System.out.println(students.get(i));
-        }
 
-        System.out.println("______________________");
-        printStudents(students,4);
-    }
 
-    public Student(){Students();}
+    public Student(){students();}
     public Student(String name, String group, int course, int grade){
         this.name = name;
         this.group = group;
@@ -34,7 +20,7 @@ public class Student {
         this.grade = grade;
     }
 
-    public static void Students(){
+    public void students(){
         Student []s = new Student[6];
         s[0] = new Student("Dasha","Informatics",1,5);
         s[1] = new Student("Natali","Economy",3,3);
@@ -48,14 +34,24 @@ public class Student {
         }
     }
 
-    public static void expelStudent(){
+    public LinkedList<Student> getStudents(){
+        return students;
+    }
+
+    public void expelStudent(){ //Понимаю что тут надо везде проставить параметром метода - список студетов... Но у меня есть НО, поэтому сделаю это позже
         for (int i =0;i<students.size();i++){
             if(students.get(i).grade < 3){
                 students.remove(i);
             }
         }
     }
-    public static void nextCourse(){
+
+    public void removeAllStudent(){
+        for(int i = students.size(); i>0;i--){
+            students.remove(i-1);
+        }
+    }
+    public void nextCourse(){
         for (int i =0;i<students.size();i++) {
             if (students.get(i).grade >= 3) {
                 students.get(i).course++;
@@ -63,7 +59,7 @@ public class Student {
         }
     }
 
-    public static void printStudents(LinkedList<Student> students, int course){
+    public void printStudents(LinkedList<Student> students, int course){
         for (int i = 0; i<students.size();i++){
             if(students.get(i).course == course) {
                 System.out.println(students.get(i).name + ", " + students.get(i).course);
