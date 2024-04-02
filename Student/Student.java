@@ -1,5 +1,6 @@
 package lessColl.Student;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 
 public class Student {
@@ -8,7 +9,7 @@ public class Student {
     private String group;
     private int course;
     private int grade;
-    static LinkedList<Student>students = new LinkedList<>();
+    static ArrayList<Student>students = new ArrayList<>();
 
 
 
@@ -34,14 +35,15 @@ public class Student {
         }
     }
 
-    public LinkedList<Student> getStudents(){
+    public ArrayList<Student> getStudents(){
         return students;
     }
 
     public void expelStudent(){ //Понимаю что тут надо везде проставить параметром метода - список студетов... Но у меня есть НО, поэтому сделаю это позже
         for (int i =0;i<students.size();i++){
-            if(students.get(i).grade < 3){
+            if(students.get(i).grade < 3){ // так лучше не делать
                 students.remove(i);
+                i--;
             }
         }
     }
@@ -59,7 +61,7 @@ public class Student {
         }
     }
 
-    public void printStudents(LinkedList<Student> students, int course){
+    public void printStudents(ArrayList<Student> students, int course){
         for (int i = 0; i<students.size();i++){
             if(students.get(i).course == course) {
                 System.out.println(students.get(i).name + ", " + students.get(i).course);

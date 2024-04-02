@@ -1,25 +1,18 @@
-package lessColl.shop;
+package lessColl.shop.functional;
 
 import lessColl.shop.Shopping.Basket;
 import lessColl.shop.Shopping.Product;
 import lessColl.shop.Users.User;
-import lessColl.shop.functional.Front;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
 
-public class Run {
+public interface Back {
 
-    private static LinkedList<Product>products = new LinkedList<>();
-    private static LinkedList<User>users = new LinkedList<>();
-    private static ArrayList<Basket>baskets = new ArrayList<>();
-    private static Front f = new Front();
-
-    public static void main(String[] args) {
-       f.authorization();
-    }
-
-    private static void setProducts(){
+    ArrayList<Product> products = new ArrayList<>();
+    LinkedList<User>users = new LinkedList<>();
+    ArrayList<Basket> baskets = new ArrayList<>();
+    public default void setProducts(){
         Product[] p = new Product[10];
         p[0] = new Product("Milk",450,4.3);
         p[1] = new Product("Sugar",399,3.3);
@@ -35,7 +28,7 @@ public class Run {
             products.add(p[i]);
         }
     }
-    private static void setUsers(){
+    public default void setUsers(){
         User[] u = new User[4];
         u[0] = new User("buyer","buy");
         u[1] = new User("user","user");
@@ -44,8 +37,5 @@ public class Run {
         for(int i =0; i<u.length;i++){
             users.add(u[i]);
         }
-    }
-    private static void setBuy(){
-
     }
 }
