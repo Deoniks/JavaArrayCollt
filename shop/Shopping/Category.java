@@ -23,4 +23,15 @@ public class Category {
     public void setProducts(ArrayList<Product> products) {
         this.products = products;
     }
+
+    public String formatedToString(ArrayList<Product>p){
+        int maxNameLength = 0;
+        int maxCategNameLenght = 0;
+        for (int i =0;i<p.size();i++) {
+            if (p.get(i).getName().length() > maxNameLength) {
+                maxNameLength = p.get(i).getName().length();
+            }
+        }
+        return String.format("%-" + maxNameLength, name);
+    }
 }

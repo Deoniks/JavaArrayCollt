@@ -2,6 +2,8 @@ package lessColl.shop.Shopping;
 
 import lessColl.shop.Shopping.Category;
 
+import java.util.ArrayList;
+
 public class Product {
     private String name;
     private int price;
@@ -40,8 +42,19 @@ public class Product {
         this.rating = rating;
     }
 
+
     @Override
     public String toString(){
-        return name + ", $" + price + ", " + rating ;
+        return name + "   "+  "$" + price + "      " + rating ;
+    }
+
+    public String formatedToString(ArrayList<Product>p){
+        int maxNameLength = 0;
+        for (int i =0;i<p.size();i++) {
+            if (p.get(i).getName().length() > maxNameLength) {
+                maxNameLength = p.get(i).getName().length();
+            }
+        }
+        return String.format("%-" + maxNameLength + "s price=%d, rate=%.1f", name, price, rating);
     }
 }

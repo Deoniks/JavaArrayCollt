@@ -10,10 +10,10 @@ public class User {
     private String password;
     private Basket usersCart;
 
-    public User(String login, String password){
+    public User(String login, String password, Basket usersCart){
         this.login = login;
         this.password = password;
-        this.usersCart = new Basket();
+        this.usersCart = usersCart;
     }
 
     public String getLogin() {
@@ -35,6 +35,7 @@ public class User {
     public Basket getUsersCart() {
         return usersCart;
     }
+    public void setUsersCart(Basket usersCart){this.usersCart = usersCart;}
 
     public void addToUsersCart(Product p) {
         this.usersCart.addBasket(p);
