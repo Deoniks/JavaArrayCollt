@@ -34,4 +34,9 @@ public class Category {
         }
         return String.format("%-" + maxNameLength, name);
     }
+
+    @Override
+    public String toString(){
+        return getName();
+    }
 }

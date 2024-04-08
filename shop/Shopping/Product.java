@@ -8,11 +8,13 @@ public class Product {
     private String name;
     private int price;
     private double rating;
+    private int index;
     private Category category = new Category();
 
     public Product(){}
 
-    public Product(String name, int price, double rating){
+    public Product(int index, String name, int price, double rating){
+        this.index = index;
         this.name = name;
         this.price = price;
         this.rating = rating;
@@ -42,19 +44,28 @@ public class Product {
         this.rating = rating;
     }
 
+    public int getIndex(){
+        return index;
+    }
+
 
     @Override
     public String toString(){
-        return name + "   "+  "$" + price + "      " + rating ;
+        return index + " , " + name + "   "+  "$" + price + "      " + rating ;
     }
 
     public String formatedToString(ArrayList<Product>p){
         int maxNameLength = 0;
+        int maxPriceLength = 5;//Тут можно взять int to string но... Допустим оно есть:)
+
         for (int i =0;i<p.size();i++) {
             if (p.get(i).getName().length() > maxNameLength) {
                 maxNameLength = p.get(i).getName().length();
             }
         }
-        return String.format("%-" + maxNameLength + "s price=%d, rate=%.1f", name, price, rating);
+
+        return String.format("%s "+"%-" + maxNameLength + "s price=%-" + maxPriceLength+ "s rate=%.1f",index, name, price, rating);
     }
+
+
 }

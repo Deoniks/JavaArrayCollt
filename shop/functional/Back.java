@@ -16,16 +16,16 @@ public interface Back {
 
     default void setProducts(){ // add product's
         Product[] p = new Product[10];
-        p[0] = new Product("Юбка",1450,4.3);
-        p[1] = new Product("Шарф",599,3.3);
-        p[2] = new Product("Рубашка",950,2.4);
-        p[3] = new Product("Кофта",2050,4.0);
-        p[4] = new Product("Джинсы",1450,5.0);
-        p[5] = new Product("Брюки",3550,3.5);
-        p[6] = new Product("Шорты",1750,2.2);
-        p[7] = new Product("Платье",5950,5.5);
-        p[8] = new Product("Блузки",3450,4.5);
-        p[9] = new Product("Футболки",550,3.0);
+        p[0] = new Product(0,"Юбка",1450,4.3);
+        p[1] = new Product(1,"Шарф",599,3.3);
+        p[2] = new Product(2,"Рубашка",950,2.4);
+        p[3] = new Product(3,"Кофта",2050,4.0);
+        p[4] = new Product(4,"Джинсы",1450,5.0);
+        p[5] = new Product(5,"Брюки",3550,3.5);
+        p[6] = new Product(6,"Шорты",1750,2.2);
+        p[7] = new Product(7,"Платье",5950,5.5);
+        p[8] = new Product(8,"Блузки",3450,4.5);
+        p[9] = new Product(9,"Футболки",550,3.0);
         for(int i =0; i<p.length;i++){
             products.add(p[i]);
         }
